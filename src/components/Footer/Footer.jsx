@@ -2,6 +2,7 @@ import React from "react";
 import { Facebook, Globe, TwitterIcon, LinkedinIcon } from "lucide-react";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="w-full fixed bottom-0 bg-default text-white">
       {/* Main content */}
@@ -38,7 +39,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="bg-default-dark text-center py-6">
-        © Your Website 2021
+        © Your Website {year}
       </div>
     </footer>
   );
