@@ -10,9 +10,12 @@ export default function Navbar() {
       {/* Wrapper */}
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl md:text-[32px] text-white font-bold uppercase">
+        <Link
+          to="/"
+          className="text-2xl md:text-[32px] text-white font-bold uppercase"
+        >
           start framework
-        </h1>
+        </Link>
         {/* Links (Desktop) */}
         <ul className="text-white font-bold uppercase hidden  md:flex flex-row gap-6 ">
           <li>
@@ -50,7 +53,6 @@ export default function Navbar() {
               <Link to="portfolio">Portfolio</Link>
             </li>
             <li>
-            
               <Link to="contact">Contact</Link>
             </li>
           </ul>
