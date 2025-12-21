@@ -4,7 +4,7 @@ import { Facebook, Globe, TwitterIcon, LinkedinIcon } from "lucide-react";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="w-full fixed bottom-0 bg-default text-white">
+    <footer className="w-full bg-default text-white">
       {/* Main content */}
       <div className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
