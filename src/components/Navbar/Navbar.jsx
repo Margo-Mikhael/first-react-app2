@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
-    
+
         {/*Toggle menu button */}
         <button
           onClick={() => setisOpen(!isOpen)}
@@ -45,13 +46,13 @@ export default function Navbar() {
         <div className="mt-4 block md:hidden font-bold text-white uppercase ">
           <ul className="flex flex-col gap-2">
             <li>
-              <a href="">Home</a>
+              <Link to="about">About</Link>
             </li>
             <li>
-              <a href="">portfolio</a>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
