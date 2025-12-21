@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 
 export default function Contact() {
   return (
-    <div>
+    <div className="grow flex items-center justify-center">
       <Header text="contact component" isDark={true} />
     </div>
   );

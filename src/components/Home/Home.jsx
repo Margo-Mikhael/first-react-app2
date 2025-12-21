@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 
 export default function Home() {
   return (
-    <div className="bg-secondary">
+    <div className="grow bg-secondary flex items-center justify-center">
       <Header text="Start Framework" isDark={false} />
     </div>
   );
