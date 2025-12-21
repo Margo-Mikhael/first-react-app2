@@ -16,15 +16,13 @@ export default function Navbar() {
         {/* Links (Desktop) */}
         <ul className="text-white font-bold uppercase hidden  md:flex flex-row gap-6 ">
           <li>
-            <a href="">about</a>
+            <Link to="about">about</Link>
           </li>
           <li>
-            <a href="">Portfolio</a>
+            <Link to="portfolio">Portfolio</Link>
           </li>
           <li>
-            <a className="" href="">
-              contact
-            </a>
+            <Link to="contact">contact</Link>
           </li>
         </ul>
 
@@ -49,10 +47,10 @@ export default function Navbar() {
               <Link to="about">About</Link>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link to="portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="contact">Contact</Link>
             </li>
           </ul>
         </div>
