@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
@@ -10,22 +10,43 @@ export default function Navbar() {
       {/* Wrapper */}
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <Link
+        <NavLink
           to="/"
           className="text-2xl md:text-[32px] text-white font-bold uppercase"
         >
           start framework
-        </Link>
-        {/* Links (Desktop) */}
+        </NavLink>
+        {/* NavLinks (Desktop) */}
         <ul className="text-white font-bold uppercase hidden  md:flex flex-row gap-6 ">
           <li>
-            <Link to="about">about</Link>
+            <NavLink
+              className={({ isActive }) =>
+                `p-2 rounded-lg ${isActive ? "bg-secondary" : ""}`
+              }
+              to="about"
+            >
+              about
+            </NavLink>
           </li>
           <li>
-            <Link to="portfolio">Portfolio</Link>
+            <NavLink
+              className={({ isActive }) =>
+                `p-2 rounded-lg ${isActive ? "bg-secondary" : ""}`
+              }
+              to="portfolio"
+            >
+              Portfolio
+            </NavLink>
           </li>
           <li>
-            <Link to="contact">contact</Link>
+            <NavLink
+              className={({ isActive }) =>
+                ` p-2 rounded-lg ${isActive ? "bg-secondary" : ""}`
+              }
+              to="contact"
+            >
+              contact
+            </NavLink>
           </li>
         </ul>
 
@@ -47,13 +68,13 @@ export default function Navbar() {
         <div className="mt-4 block md:hidden font-bold text-white uppercase ">
           <ul className="flex flex-col gap-2">
             <li>
-              <Link to="about">About</Link>
+              <NavLink to="about">About</NavLink>
             </li>
             <li>
-              <Link to="portfolio">Portfolio</Link>
+              <NavLink to="portfolio">Portfolio</NavLink>
             </li>
             <li>
-              <Link to="contact">Contact</Link>
+              <NavLink to="contact">Contact</NavLink>
             </li>
           </ul>
         </div>
