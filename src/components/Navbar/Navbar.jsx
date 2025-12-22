@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
 
   return (
-    <div className="w-full bg-default py-6 px-8 md:px-28">
+    <div className="sticky top-0 z-50 w-full bg-default py-6 px-8 md:px-28">
       {/* Wrapper */}
       <div className="flex items-center justify-between">
         {/* Logo */}
