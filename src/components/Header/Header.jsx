@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header({ text, isDark }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-4">
       <h1
         className={`text-lg font-bold uppercase text-[40px] ${
           isDark ? "text-default" : "text-white"
