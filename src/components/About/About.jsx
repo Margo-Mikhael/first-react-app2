@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 
 export default function About() {
   return (
-    <div className="grow bg-secondary flex items-center justify-center min-h-[620px] ">
+    <div className="grow bg-secondary flex items-center justify-center min-h-dvh ">
       {/* section content container */}
       <div className="flex flex-col gap-4 container  ">
         <Header text="About component" isDark={false} />
