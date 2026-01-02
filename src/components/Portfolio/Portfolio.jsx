@@ -33,11 +33,17 @@ export default function Portfolio() {
         ))}
       </div>
       {isModalOpen && (
-        <div className="bg-black/50 w-full h-full  absolute flex justify-center items-center">
-          <img className="h-100" src={selectedImage} alt="image" />
-
-          {/* Enahnce layout and make bg take full screen */}
-          {/* implement close functionalitiy */}
+        <div
+          onClick={() => setisModalOpen(false)} 
+          className="bg-black/50 w-full h-full fixed top-0 left-0 z-50 flex justify-center items-center cursor-pointer"
+        >
+          <div className="relative">
+            <img
+              className="max-h-[50vh] max-w-[60vw] object-contain rounded-lg"
+              src={selectedImage}
+              alt="image"
+            />
+          </div>
         </div>
       )}
     </div>
