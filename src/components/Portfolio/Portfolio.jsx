@@ -3,6 +3,7 @@ import port1 from "../../assets/port1.png";
 import port2 from "../../assets/port2.png";
 import port3 from "../../assets/port3.png";
 import { useState } from "react";
+import { Plus } from "lucide-react";
 
 export default function Portfolio() {
   const images = [port1, port2, port3];
@@ -22,19 +23,22 @@ export default function Portfolio() {
               setisModalOpen(true);
             }}
             key={i}
-            className="rounded-lg bg-secondary w-[390px] h-[280px] cursor-pointer "
+            className="rounded-lg w-[390px] h-[280px] cursor-pointer relative group"
           >
             <img
-              className="w-full rounded-lg"
+              className="w-full rounded-lg hover:opacity-30 duration-300"
               src={images[i % 3]}
               alt="image"
             />
+            <div className="absolute inset-0 bg-secondary/90 rounded-lg hidden group-hover:flex justify-center items-center duration-300">
+              <Plus className="size-20 text-white"/>
+            </div>
           </button>
         ))}
       </div>
       {isModalOpen && (
         <div
-          onClick={() => setisModalOpen(false)} 
+          onClick={() => setisModalOpen(false)}
           className="bg-black/50 w-full h-full fixed top-0 left-0 z-50 flex justify-center items-center cursor-pointer"
         >
           <div className="relative">
